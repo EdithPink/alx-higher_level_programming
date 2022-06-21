@@ -1,25 +1,22 @@
 #!/usr/bin/python3
+# 4-square.py
+"""Define a class Square."""
+
+
 class Square:
-    """Represents a square.
-    Private instance attribute: size:
-        - property def size(self)
-        - property setter def size(self, value)
-    Instantiation with optional size.
-    Public instance method: def area(self).
-    """
+    """Represent a square."""
 
     def __init__(self, size=0):
-        """Initializes the data."""
+        """Initialize a new square."""
         self.__size = size
 
     @property
     def size(self):
-        """Retrieves the size."""
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """Sets the size to a value."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -27,5 +24,5 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Returns the current square area."""
-        return self.__size ** 2
+        """Return the current area of the square."""
+        return (self.__size ** 2)
